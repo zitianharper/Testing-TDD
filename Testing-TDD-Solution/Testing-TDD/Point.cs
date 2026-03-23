@@ -8,6 +8,10 @@ namespace Testing_TDD
 {
     public enum Point
     {
+        North,
+        East,
+        South,
+        West
 
     }
 }

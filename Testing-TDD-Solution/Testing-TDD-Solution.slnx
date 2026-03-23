@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="Testing-TDD.Tests/Testing-TDD.Tests.csproj" Id="1d86b996-fc65-4ea5-9d7c-a452a1c08713" />
   <Project Path="Testing-TDD/Testing-TDD.csproj" />
 </Solution>

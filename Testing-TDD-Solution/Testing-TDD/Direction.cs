@@ -8,7 +8,7 @@ namespace Testing_TDD
 {
     public enum Direction
     {
-        left,
-        right
+        Left,
+        Right
     }
 }

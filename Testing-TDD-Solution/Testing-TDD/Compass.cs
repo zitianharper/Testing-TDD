@@ -8,15 +8,26 @@ namespace Testing_TDD
 {
 
 
-    internal class Compass
+    public class Compass
     {
+        public Compass(Point point)
+        {
+
+        }
+
+
         public Point CurrentPoint { get; set; }
 
-     
-
-        public static Point Rotate(Point point, Direction direction)
+        public Point Rotate(Point point, Direction direction)
             {
-            return Point.South;
+
+            if(point == Point.North && direction == Direction.Right)
+            {
+                return Point.East;
+            }
+
+
+            return Point.South; //this is just a fallback
             }
     }
 }
