@@ -20,11 +20,11 @@ namespace Testing_TDD
 
         public Point Rotate(Point point, Direction direction)
             {
-
-            if(point == Point.North && direction == Direction.Right)
+            if (point == Point.North && direction == Direction.Right)
             {
                 return Point.East;
             }
+
 
 
             return Point.South; //this is just a fallback
