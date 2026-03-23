@@ -24,7 +24,18 @@ namespace Testing_TDD
             {
                 return Point.East;
             }
-
+            else if (point == Point.East && direction == Direction.Right)
+            {
+                return Point.South;
+            }
+            else if (point == Point.South && direction == Direction.Right)
+            {
+                return Point.West;
+            }
+            else if (point == Point.West && direction == Direction.Right)
+            {
+                return Point.North;
+            }
 
 
             return Point.South; //this is just a fallback

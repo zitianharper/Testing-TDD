@@ -40,8 +40,6 @@ public class CompassTests
             Assert.That(compass.Rotate(Point.South, Direction.Right), Is.EqualTo(Point.West));
             Assert.That(compass.Rotate(Point.West, Direction.Right), Is.EqualTo(Point.North));
 
-
-
         });
     }
 }
