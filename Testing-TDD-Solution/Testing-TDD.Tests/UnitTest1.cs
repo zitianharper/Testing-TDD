@@ -42,4 +42,18 @@ public class CompassTests
 
         });
     }
+
+    [Test]
+    public void Rotate_AllPoints_TurnLeft_ReturnCorrectResults()
+    {
+        var compass = new Compass(Point.North);
+        Assert.Multiple(() =>
+        {
+            Assert.That(compass.Rotate(Point.North, Direction.Left), Is.EqualTo(Point.West));
+            Assert.That(compass.Rotate(Point.West, Direction.Left), Is.EqualTo(Point.South));
+            Assert.That(compass.Rotate(Point.South, Direction.Left), Is.EqualTo(Point.East));
+            Assert.That(compass.Rotate(Point.East, Direction.Left), Is.EqualTo(Point.North));
+
+        });
+    }
 }
