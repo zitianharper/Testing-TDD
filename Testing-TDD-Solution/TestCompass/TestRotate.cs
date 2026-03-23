@@ -1,23 +1,32 @@
 ﻿using System.Drawing;
 using NUnit.Framework;
-namespace TestCompass
+using Testing_TDD;
+
+namespace TestCompass;
+[TestFixture]
+public class CompassTests
 {
-    [TestClass]
-    public sealed class TestRotate
+    private Compass compass;
+
+    [SetUp]
+    public void Setup()
     {
-        [Test]
-        public void Rotate_FromNorth_TurnRight_ReturnsEast()
-        {
-        //Arrange - declare point and direction and rotate method
-        var compass = new Compass();
-        
-        //Act - point and position after Rotate 
-        var result = Compass.Rotate(Point.North, Direction.Right);
-
-
-        //Assert - what should be returned after rotate
-        Assert.AreEqual(Point.East, result);
-
+        // Initialise
+        compass = new Compass(Point.North);
     }
-}
+
+    [Test]
+    [TestCase]
+    public void Rotate_ReturnsEast_WhenFacingNorthAndTurningRight()
+    {
+        // Arrange
+        Point startingPoint = Point.North;
+        Direction turnDirection = Direction.Right;
+
+        // Act
+        Point result = compass.Rotate(startingPoint, turnDirection);
+
+        // Assert
+        Assert.AreEqual(Point.East, result);
+    }
 }
